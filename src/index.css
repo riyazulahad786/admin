@@ -7,8 +7,9 @@
 } 
  /* Reduce the width of the scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;  /* Adjust width */
-  height: 6px; /* For horizontal scrollbar, if needed */
+  width: 4px;  /* Adjust width */
+  height: 4px; /* For horizontal scrollbar, if needed */
+  
 }
 
 /* Scrollbar track */
@@ -16,12 +17,13 @@
   background: #f1f1f1; /* Track color */
 }
 .sidebar{
-  z-index: 200 ;
+  z-index: 200;
+  border-radius: 20px;
 }
 /* Scrollbar handle (thumb) */
 ::-webkit-scrollbar-thumb {
   background: #888;  /* Thumb color */
-  border-radius: 10px; /* Rounded corners */
+  border-radius: 40px; /* Rounded corners */
 }
 
 /* Scrollbar thumb on hover */

@@ -25,28 +25,47 @@ function Sidebar() {
   const handleItemClick = (item) => {
     setActiveItem(item.label);
     navigate(item.path);
-    setIsSidebarOpen(false); // Close sidebar on mobile after clicking
+    setIsSidebarOpen(false); // Close sidebar after selection
   };
 
   return (
     <>
       {/* Mobile Menu Button */}
       <button
-        className="md:hidden p-2  fixed top-4 left-4   bg-white rounded-full shadow-lg"
-        onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+        className="md:hidden p-2 fixed top-4 left-4 bg-white rounded-full shadow-lg"
+        onClick={() => setIsSidebarOpen(true)}
       >
-        {isSidebarOpen ? <X size={28} /> : <Menu size={28} />}
+        <Menu size={28} />
       </button>
+
+      {/* Overlay for mobile */}
+      {isSidebarOpen && (
+        <div
+          className="fixed inset-0 bg-black opacity-50 md:hidden"
+          onClick={() => setIsSidebarOpen(false)}
+        />
+      )}
 
       {/* Sidebar */}
       <aside
-        className={`fixed top-0 left-0 h-full w-64 bg-white sidebar shadow-lg transform transition-transform md:translate-x-0 ${
+        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform md:translate-x-0 ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-        } md:relative md:w-64 md:block`}
+        } md:relative md:w-64 md:block z-50`}
       >
-        <nav className="h-full flex flex-col px-3 py-2 overflow-y-auto">
-          <h2 className="text-2xl text-center font-bold text-[#199FB1] py-4">Logo</h2>
+        <nav className="h-full flex flex-col px-3 py-2 overflow-y-auto relative">
+          {/* Sidebar Header with Close Button */}
+          <div className="flex justify-between items-center py-4">
+            <h2 className="text-2xl font-bold text-[#199FB1] text-center w-full">Logo</h2>
+            <button
+              className="md:hidden p-2 text-gray-600 hover:text-gray-900"
+              onClick={() => setIsSidebarOpen(false)}
+            >
+              <X size={28} />
+            </button>
+          </div>
+
           <hr />
+
           <ul className="space-y-2 text-[#199FB1]">
             {menuItems.map((item, index) => (
               <div key={index}>
@@ -61,14 +80,6 @@ function Sidebar() {
           </ul>
         </nav>
       </aside>
-
-      {/* Overlay for mobile */}
-      {isSidebarOpen && (
-        <div
-          className="fixed inset-0 bg-black opacity-50 md:hidden"
-          onClick={() => setIsSidebarOpen(false)}
-        />
-      )}
     </>
   );
 }
