@@ -113,43 +113,38 @@ function Dashboard() {
 
           {/* Right Side (Chart Area) */}
           <div className="hidden lg:block w-full lg:w-1/2 p-1 bg-gray-100 rounded-lg shadow flex flex-col justify-between">
-  {/* Title for the Graph */}
-  <div className="text-xl font-semibold mb-4">Company Growth</div>
+            {/* Title for the Graph */}
+            <div className="text-xl font-semibold mb-4">Company Growth</div>
 
-  {/* Placeholder for the Graph (could be an actual chart) */}
-  <div className="flex-1 text-center text-gray-600">
-    Graph will go here
-  </div>
+            {/* Placeholder for the Graph (could be an actual chart) */}
+            <div className="flex-1 text-center text-gray-600">
+              Graph will go here
+            </div>
 
-  {/* Button Section */}
-  <div className="flex justify-around items-center mt-4 space-x-2">
-    <button className="py-1 px-4 bg-[#199FB1] text-white rounded-md">
-      Month
-    </button>
-    <button className="py-1 px-4 bg-white text-black border-2 border-[#199FB1] rounded-md">
-      Year
-    </button>
-    <button className="py-1 px-4 bg-white text-black border-2 border-[#199FB1] rounded-md">
-      1 Year
-    </button>
-    <button className="py-1 px-4 bg-white text-black border-2 border-[#199FB1] rounded-md">
-      2 Year
-    </button>
-  </div>
-</div>
-
+            {/* Button Section */}
+            <div className="flex justify-around items-center mt-4 space-x-2">
+              <button className="py-1 px-4 bg-[#199FB1] text-white rounded-md">
+                Month
+              </button>
+              <button className="py-1 px-4 bg-white text-black border-2 border-[#199FB1] rounded-md">
+                Year
+              </button>
+              <button className="py-1 px-4 bg-white text-black border-2 border-[#199FB1] rounded-md">
+                1 Year
+              </button>
+              <button className="py-1 px-4 bg-white text-black border-2 border-[#199FB1] rounded-md">
+                2 Year
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-       
-      <h1 className="text-xl py-2">User Management</h1>
+        <h1 className="text-xl py-2">User Management</h1>
         <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-         
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            
             <tr>
-            
               <th scope="col" className="p-4">
                 <div className="flex items-center">
                   <input

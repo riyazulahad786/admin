@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Layout from "./components/Layout.jsx";
+import Layouts from "./Components/Layouts.jsx";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Dashboard from "./pages/Dashboard";
@@ -14,23 +14,23 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/user"    element={
-            <Layout>
+            <Layouts>
               <UserManagement/>
-            </Layout>
+            </Layouts>
           }/>
         <Route
        path="/rating-review"    element={
-            <Layout>
+            <Layouts>
               <Rating/>
-            </Layout>
+            </Layouts>
           }>
 
           </Route>
           <Route
        path="/setting"    element={
-            <Layout>
+            <Layouts>
               <Setting/>
-            </Layout>
+            </Layouts>
           }>
 
           </Route>
