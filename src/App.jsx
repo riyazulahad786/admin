@@ -2,10 +2,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layouts from "./Components/Layouts.jsx";
 import Login from "./Components/Login";
 import Register from "./Components/Register";
-import Dashboard from "./pages/Dashboard";
-import UserManagement from "./pages/userManagement";
-import Rating from "./pages/Rating";
-import Setting from "./pages/Setting";
+import Dashboard from "./Pages/Dashboard.jsx";
+import UserManagement from "./Pages/userManagement.jsx";
+import Rating from "./Pages/Rating.jsx";
+import Setting from "./Pages/Setting.jsx";
 
 function App() {
   return (
@@ -38,10 +38,10 @@ function App() {
        
           path="/*"
           element={
-            <Layout>
+            <Layouts>
               <h1 className="text-2xl font-bold py-2">Welcome to Dashboard</h1>
               <Dashboard/>
-            </Layout>
+            </Layouts>
           }
         />
         
