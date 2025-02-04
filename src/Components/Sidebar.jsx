@@ -14,6 +14,8 @@ function Sidebar() {
     { label: "Settings", path: "/setting" },
     { label: "History", path: "/history" },
     { label: "All Bookings", path: "/all-bookings" },
+    { label: "Register", path: "/register" },
+    { label: "Login", path: "/login" },
     { label: "Push Notifications", path: "/notifications" },
     { label: "Transaction List", path: "/transactions" },
     { label: "Google Analytics", path: "/analytics" },
